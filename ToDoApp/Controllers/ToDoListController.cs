@@ -23,6 +23,19 @@ namespace ToDoApp.Controllers
             return await _todoDbContext.List.ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List>> GetListById(int id)
+        {
+            var task = await _todoDbContext.List.FindAsync(id);
+
+            if (task == null)
+            {
+                return NotFound();
+            }
+
+            return task;
+        }
+
         [HttpPost]
         [Route("AddList")]
         public async Task<List> AddList(List objList)
