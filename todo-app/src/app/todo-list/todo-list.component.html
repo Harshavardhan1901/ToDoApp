@@ -1,0 +1,30 @@
+<div class="container mt-4" >
+  <div class="card">
+        <h1>ToDo App</h1>
+        <button class="btn btn-primary mt-2" (click)="navigateToAddTask()">Add Task</button>
+  </div>
+
+      <div class="container mt-4" >
+          <h1>ToDo List</h1>
+      <table class="table">
+          <thead>
+           <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+          <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>  
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let ListItem of ListArray">
+                  <td>{{ListItem.id  }}</td>
+              <td>{{ListItem.title }}</td>
+              <td>{{ListItem.description }}</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="setUpdate(ListItem)">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="setDelete(ListItem)">Delete</button>            
+              </td>
+            </tr>          
+          </tbody>
+        </table>
+      </div>
