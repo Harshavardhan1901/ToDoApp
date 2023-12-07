@@ -4,6 +4,10 @@ namespace ToDoApp.Models
 {
     public class ListDbContext : DbContext
     {
+        public ListDbContext()
+        {
+        }
+
         public ListDbContext(DbContextOptions<ListDbContext> options) : base(options)
         {
         }
