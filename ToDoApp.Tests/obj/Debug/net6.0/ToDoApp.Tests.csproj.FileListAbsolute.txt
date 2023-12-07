@@ -1,0 +1,7 @@
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\ToDoApp.Tests.csproj.AssemblyReference.cache
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\MvcTestingAppManifest.json
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\ToDoApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\ToDoApp.Tests.AssemblyInfoInputs.cache
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\ToDoApp.Tests.AssemblyInfo.cs
+C:\Users\harsh\OneDrive\Desktop\ToDoApp\ToDoApp.Tests\obj\Debug\net6.0\ToDoApp.Tests.csproj.CoreCompileInputs.cache

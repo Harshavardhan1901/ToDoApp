@@ -12,7 +12,12 @@ namespace ToDoApp.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=LAPTOP-P20IR6K6;database=ToDoAppDb;trusted_connection=true; TrustServerCertificate=true;");
+            //optionsBuilder.UseSqlServer("server=LAPTOP-P20IR6K6;database=ToDoAppDb;trusted_connection=true; TrustServerCertificate=true;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                // Use in-memory database for testing
+                optionsBuilder.UseInMemoryDatabase("TestDatabase");
+            }
         }
     }
 }
