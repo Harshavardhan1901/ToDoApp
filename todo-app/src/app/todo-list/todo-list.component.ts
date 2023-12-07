@@ -27,7 +27,12 @@ export class TodoListComponent {
     this.http.get("http://localhost:5031/api/ToDoList/GetList").subscribe((resultData: any) => {
       this.isResultLoaded = true;
       console.log(resultData);
-      this.ListArray = resultData;
+      
+      // Assign serial number to each task
+      this.ListArray = resultData.map((task: any, index: number) => ({
+        ...task,
+        serialNumber: index + 1,
+      }));
     });
   }
 
