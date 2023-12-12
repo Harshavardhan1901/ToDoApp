@@ -1,7 +1,21 @@
 <div class="container mt-4" >
   <div class="card">
-        <h1>ToDo App</h1>
-        <button class="btn btn-primary mt-2" (click)="navigateToAddTask()">Add Task</button>
+          <h1>ToDo App</h1>
+  
+  <form>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" class="form-control" id="title" placeholder="Enter Title">
+      </div>
+  
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" class="form-control" id="description" placeholder="Enter Description">
+      </div>
+  
+      <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Save</button>
+     
+    </form>
   </div>
 
       <div class="container mt-4" >
@@ -10,20 +24,21 @@
           <thead>
            <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
           <tr>
-              <th scope="col">Task</th>
+              <th scope="col">S.No</th>
               <th scope="col">Title</th>
-              <th scope="col">Description</th>  
+              <th scope="col">Description</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
               <tr *ngFor="let ListItem of ListArray">
-                <td>{{ListItem.serialNumber}}</td>
-                <td>{{ListItem.title}}</td>
-                <td>{{ListItem.description }}</td>
-                <td>
-                  <button type="button" class="btn btn-success" (click)="setUpdate(ListItem)">Edit</button>
-                  <button type="button" class="btn btn-danger" (click)="setDelete(ListItem)">Delete</button>            
-                </td>
+                  <td>{{ListItem.serialNumber }}</td>
+              <td>{{ListItem.title }}</td>
+              <td>{{ListItem.description }}</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="setUpdate(ListItem)">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="setDelete(ListItem)">Delete</button>            
+              </td>
             </tr>          
           </tbody>
         </table>

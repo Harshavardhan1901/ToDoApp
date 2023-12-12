@@ -6,15 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { EditTaskComponent } from './edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    AddTaskComponent,
-    EditTaskComponent,
   ],
   imports: [
     BrowserModule,
